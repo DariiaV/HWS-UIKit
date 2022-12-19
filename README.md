@@ -7,7 +7,6 @@
 - UIImageView
 - NavigationController
 - NavigationBar
-- Delegate
 
 ![](Project1/project1.gif)
 
