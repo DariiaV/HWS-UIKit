@@ -1,1 +1,30 @@
-# HWS-UIKit
+# HWS-UIkit
+
+
+## [Project 1. Day 16-18](https://github.com/DariiaV/HWS-UIKit/tree/main/Project1)
+### What used:
+- UITableView
+- UIImageView
+- NavigationController
+- NavigationBar
+- Delegate
+
+![](Project1/project1.gif)
+
+## [Project 2. Day 19-21](https://github.com/DariiaV/HWS-UIKit/tree/main/Project2)
+### What used:
+- UIImage
+- UIButton
+- Layer
+
+![](Project2/project2.gif)
+
+## [Challenge 1. Day 23](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge1)
+### What used:
+- UITableView
+- UIImageView
+- NavigationController
+- UIBarButtonItem
+- NavigationItem.rightBarButtonItem
+
+![](Challenge1/challange1.gif)
