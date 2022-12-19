@@ -36,6 +36,5 @@
 - URLRequest
 - UIToolbar
 - UIProgressView
-- Delegate
 
 ![](Project4/Project4.gif)
