@@ -28,3 +28,15 @@
 - NavigationItem.rightBarButtonItem
 
 ![](Challenge1/challange1.gif)
+
+## [Project 4. Day 24-26](https://github.com/DariiaV/HWS-UIKit/tree/main/Project4)
+### What used:
+- loadView()
+- WKWebView
+- URL
+- URLRequest
+- UIToolbar
+- UIProgressView
+- Delegate
+
+![](Project4/Project4.gif)
