@@ -7,7 +7,6 @@
 - UIImageView
 - NavigationController
 - NavigationBar
-- Delegate
 
 ![](Project1/project1.gif)
 
@@ -37,6 +36,5 @@
 - URLRequest
 - UIToolbar
 - UIProgressView
-- Delegate
 
 ![](Project4/Project4.gif)
