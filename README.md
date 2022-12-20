@@ -46,3 +46,8 @@
 - NSRange
 
 ![](Project5/Project5.gif)
+
+## [Project 6a. Day 29](https://github.com/DariiaV/HWS-UIKit/tree/main/Project6a)
+## [Project 6b. Day 30-31](https://github.com/DariiaV/HWS-UIKit/tree/main/Project6b)
+### What used:
+- Auto Layout
