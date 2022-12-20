@@ -51,3 +51,13 @@
 ## [Project 6b. Day 30-31](https://github.com/DariiaV/HWS-UIKit/tree/main/Project6b)
 ### What used:
 - Auto Layout
+
+## [Challenge 2. Day 32](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge2)
+### What used:
+- UITableView
+- UIActivityViewController
+- NavigationController
+- UIBarButtonItem
+- UIAlertController
+
+![](Challenge2/Challenge2.gif)
