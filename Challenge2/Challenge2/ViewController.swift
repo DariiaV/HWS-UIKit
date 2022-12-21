@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.frame = view.frame
-        tableView.backgroundColor = UIColor(hexString: "F0DBDB")
+        tableView.backgroundColor = UIColor(named: "backgroundColor")
     }
     
     @objc private func addNewItem() {
@@ -50,11 +50,13 @@ class ViewController: UIViewController {
         alertVC.addTextField { textField in
             textField.placeholder = "Create new item"
         }
-        let action = UIAlertAction(title: "Add Item", style: .default) { [self] _ in
+        let action = UIAlertAction(title: "Add Item", style: .default) { [weak self] _ in
+            guard let self else {
+                return
+            }
+            
             if let text = alertVC.textFields?.first?.text, !text.isEmpty {
-                let newItem = String(text)
-                shoppingList.append(newItem)
-                
+                self.shoppingList.append(text)
                 self.tableView.insertRows(at: [IndexPath(row: self.shoppingList.count - 1, section: 0)], with: .automatic)
             }
         }
@@ -84,7 +86,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
         cell.textLabel?.text = shoppingList[indexPath.row]
-        cell.backgroundColor = UIColor(hexString: "F0DBDB")
+        cell.backgroundColor = UIColor(named: "backgroundColor")
         return cell
     }
     
