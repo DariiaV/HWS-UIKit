@@ -61,3 +61,14 @@
 - UIAlertController
 
 ![](Challenge2/Challenge2.gif)
+
+## [Project 7. Day 33-35](https://github.com/DariiaV/HWS-UIKit/tree/main/Project7)
+### What used:
+- UITabBarController
+- UIAlertController
+- NavigationController
+- JSON
+- WKWebView
+- UITableView
+
+![](Project7/Project7.gif)
