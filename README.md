@@ -72,3 +72,11 @@
 - UITableView
 
 ![](Project7/Project7.gif)
+
+## [Project 8. Day 36-38](https://github.com/DariiaV/HWS-UIKit/tree/main/Project8)
+### What used:
+-  enumerated()
+-  joined()
+-  replacingOccurrences()
+
+![](Project8/Project8.gif)
