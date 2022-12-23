@@ -81,6 +81,6 @@
 
 ![](Project8/Project8.gif)
 
-## [Challenge 3. Day 39-40](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge3)
+## [Challenge 3. Day 39-41](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge3)
 
 ![](Challenge3/Challenge3.gif)
