@@ -84,3 +84,14 @@
 ## [Challenge 3. Day 39-41](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge3)
 
 ![](Challenge3/Challenge3.gif)
+
+## [Project 10. Day 42-44](https://github.com/DariiaV/HWS-UIKit/tree/main/Project10)
+### What used:
+- UICollectionView
+- UIImagePickerController
+- UUID
+
+![](Project10/Project10.gif)
+![](Project10/Project10a.gif)
+
+
