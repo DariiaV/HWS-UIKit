@@ -11,14 +11,18 @@ class PersonCell: UICollectionViewCell {
     
     private lazy var  imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.layer.borderColor = UIColor(white: 0, alpha: 0.3).cgColor
+        imageView.layer.borderWidth = 2
+        imageView.layer.cornerRadius = 3
         return imageView
     }()
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Asdmm"
+        label.text = "Label"
         label.textAlignment = .center
         label.numberOfLines = 2
+        label.textColor = .black
         label.font = UIFont(name: "Marker Felt", size: 16)
         return label
     }()
@@ -32,6 +36,11 @@ class PersonCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupCell(name: String, image: UIImage?) {
+        nameLabel.text = name
+        imageView.image = image
     }
     
     private func configure() {

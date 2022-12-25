@@ -13,6 +13,7 @@
 		D8BF72CB2956DCFE000CCE4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BF72CA2956DCFE000CCE4D /* ViewController.swift */; };
 		D8BF72D02956DCFF000CCE4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BF72CF2956DCFF000CCE4D /* Assets.xcassets */; };
 		D8BF72D32956DCFF000CCE4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BF72D12956DCFF000CCE4D /* LaunchScreen.storyboard */; };
+		D8C1957529586DC30059B47E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C1957429586DC30059B47E /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D8BF72CF2956DCFF000CCE4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8BF72D22956DCFF000CCE4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8BF72D42956DCFF000CCE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C1957429586DC30059B47E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D8BF72C82956DCFE000CCE4D /* SceneDelegate.swift */,
 				D8BF72CA2956DCFE000CCE4D /* ViewController.swift */,
 				D81668252957868B00820805 /* PersonCell.swift */,
+				D8C1957429586DC30059B47E /* Person.swift */,
 				D8BF72CF2956DCFF000CCE4D /* Assets.xcassets */,
 				D8BF72D12956DCFF000CCE4D /* LaunchScreen.storyboard */,
 				D8BF72D42956DCFF000CCE4D /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C1957529586DC30059B47E /* Person.swift in Sources */,
 				D8BF72CB2956DCFE000CCE4D /* ViewController.swift in Sources */,
 				D8BF72C72956DCFE000CCE4D /* AppDelegate.swift in Sources */,
 				D81668262957868B00820805 /* PersonCell.swift in Sources */,
@@ -279,6 +283,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Project10/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -306,6 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Project10/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
