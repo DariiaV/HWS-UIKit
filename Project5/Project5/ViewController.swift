@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     private let tableView = UITableView()
     private let cellReuseIdentifier = "cell"
+    private var isNewGame = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
         setupNavigationItem()
         searchStartWordsUrl()
         startGame()
+        isNewGame = false
+        
     }
     
     private func setupTableView() {
@@ -49,9 +52,19 @@ class ViewController: UIViewController {
     }
     
     @objc private func startGame() {
-        title = allWords.randomElement()
-        usedWords.removeAll(keepingCapacity: true)
+        if let word = loadWord(),
+           isNewGame {
+            title = word
+            usedWords = loadWords()
+        } else {
+            let newWord = allWords.randomElement()
+            title = newWord
+            saveNewWord(word: newWord)
+            saveWords(words: [])
+            usedWords.removeAll(keepingCapacity: true)
+        }
         tableView.reloadData()
+        
     }
     
     private func submit(_ answer: String) {
@@ -78,7 +91,7 @@ class ViewController: UIViewController {
         }
         
         usedWords.insert(lowerAnswer, at: 0)
-        
+        saveWords(words: usedWords)
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
@@ -108,7 +121,7 @@ class ViewController: UIViewController {
     
     private func isReal(word: String) -> Bool {
         if let title,
-           title == word || word.count <= 3 {
+           title == word || word.count < 3 {
             return false
         }
         let checker = UITextChecker()
@@ -132,6 +145,38 @@ class ViewController: UIViewController {
         
     }
     
+    private func saveNewWord(word: String?) {
+        guard let word else {
+            return
+        }
+        
+        let defaults = UserDefaults.standard
+        defaults.set(word, forKey: "newWord")
+    }
+    
+    private func loadWord() -> String? {
+        let defaults = UserDefaults.standard
+        
+        if let word = defaults.value(forKey: "newWord") as? String {
+            return word
+        } else {
+            return nil
+        }
+    }
+    
+    private func saveWords(words: [String]) {
+        let defaults = UserDefaults.standard
+        defaults.set(words, forKey: "words")
+    }
+    
+    private func loadWords() -> [String] {
+        let defaults = UserDefaults.standard
+        if let words = defaults.value(forKey: "words") as? [String] {
+            return words
+        } else {
+            return []
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -149,5 +194,4 @@ extension ViewController: UITableViewDataSource {
         cell.textLabel?.font = .systemFont(ofSize: 20)
         return cell
     }
-    
 }
