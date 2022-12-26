@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     private var score = 0
     private var correctAnswer = 0
     private var answerCount = 10
+    private var finalScore = 0
     
     private lazy var button1: UIButton = {
         let button = UIButton()
@@ -49,6 +50,7 @@ class ViewController: UIViewController {
         setupButtons()
         askQuestion()
         setupNavigationItem()
+        loadFinalScore()
     }
     
     private func setupButtons() {
@@ -114,8 +116,14 @@ class ViewController: UIViewController {
     }
     
     private func showFinalScore() {
+        var message: String?
+        if finalScore < score {
+            finalScore = score
+            saveFinalScore()
+            message = "Your new high score is \(score) "
+        }
         let ac = UIAlertController(title: "Your final score is \(score)",
-                                   message: nil,
+                                   message: message,
                                    preferredStyle: .alert)
         let restart = UIAlertAction(title: "Restart",
                                     style: .destructive) { _ in
@@ -144,5 +152,29 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightBarItem
         navigationController?.navigationBar.isUserInteractionEnabled = false
     }
+    
+    private func saveFinalScore() {
+        let jsonEncoder = JSONEncoder()
+        if let savedData = try? jsonEncoder.encode(finalScore) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "finalScore")
+        } else {
+            print("Failed to save score.")
+        }
+    }
+    
+    private func loadFinalScore() {
+        let defaults = UserDefaults.standard
+        if let savedFinalScore = defaults.object(forKey: "finalScore") as? Data {
+            let jsonDecoder = JSONDecoder()
+
+            do {
+                finalScore = try jsonDecoder.decode(Int.self, from: savedFinalScore)
+            } catch {
+                print("Failed to load score")
+            }
+        }
+    }
+    
 }
 
