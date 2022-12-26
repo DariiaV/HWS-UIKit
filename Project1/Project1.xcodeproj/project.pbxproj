@@ -23,6 +23,8 @@
 		D87DE584294DEC71007C4B70 /* nssl0033.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87DE57A294DEC71007C4B70 /* nssl0033.jpg */; };
 		D87DE585294DEC71007C4B70 /* nssl0034.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87DE57B294DEC71007C4B70 /* nssl0034.jpg */; };
 		D87DE587294DFC16007C4B70 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87DE586294DFC16007C4B70 /* DetailViewController.swift */; };
+		D880BCFB2959F856000B9985 /* PictureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D880BCFA2959F856000B9985 /* PictureManager.swift */; };
+		D880BCFD2959F89E000B9985 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D880BCFC2959F89E000B9985 /* Picture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D87DE57A294DEC71007C4B70 /* nssl0033.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0033.jpg; sourceTree = "<group>"; };
 		D87DE57B294DEC71007C4B70 /* nssl0034.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0034.jpg; sourceTree = "<group>"; };
 		D87DE586294DFC16007C4B70 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D880BCFA2959F856000B9985 /* PictureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureManager.swift; sourceTree = "<group>"; };
+		D880BCFC2959F89E000B9985 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				D87DE55D294DEAEC007C4B70 /* AppDelegate.swift */,
 				D87DE55F294DEAEC007C4B70 /* SceneDelegate.swift */,
 				D87DE561294DEAEC007C4B70 /* ViewController.swift */,
+				D880BCFA2959F856000B9985 /* PictureManager.swift */,
+				D880BCFC2959F89E000B9985 /* Picture.swift */,
 				D87DE586294DFC16007C4B70 /* DetailViewController.swift */,
 				D87DE566294DEAED007C4B70 /* Assets.xcassets */,
 				D87DE568294DEAED007C4B70 /* LaunchScreen.storyboard */,
@@ -185,9 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D880BCFD2959F89E000B9985 /* Picture.swift in Sources */,
 				D87DE562294DEAEC007C4B70 /* ViewController.swift in Sources */,
 				D87DE55E294DEAEC007C4B70 /* AppDelegate.swift in Sources */,
 				D87DE560294DEAEC007C4B70 /* SceneDelegate.swift in Sources */,
+				D880BCFB2959F856000B9985 /* PictureManager.swift in Sources */,
 				D87DE587294DFC16007C4B70 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
