@@ -94,4 +94,10 @@
 ![](Project10/Project10.gif)
 ![](Project10/Project10a.gif)
 
+## [Project 12a. Day 48](https://github.com/DariiaV/HWS-UIKit/tree/main/Project12a)
+## [Project 12b. Day 49](https://github.com/DariiaV/HWS-UIKit/tree/main/Project12b)
+### What used:
+- NSCoding
+- Codable
+- UserDefaults
 
