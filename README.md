@@ -101,3 +101,11 @@
 - Codable
 - UserDefaults
 
+## [Challenge 4. Day 50](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge4)
+### What used:
+- Codable
+- UserDefaults
+- imagePickerController
+- trailingSwipeActionsConfigurationForRowAt(tableview)
+
+![](Challenge4/Challenge4.gif)
