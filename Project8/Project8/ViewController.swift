@@ -206,7 +206,8 @@ class ViewController: UIViewController {
         loadLevel()
         
         for button in letterButtons {
-            button.isHidden = false
+            button.alpha = 1
+            button.transform = .identity
         }
         
     }
@@ -218,7 +219,14 @@ class ViewController: UIViewController {
         
         currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
+        
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0, animations: {
+            sender.alpha = 0
+            sender.transform = CGAffineTransform(translationX: 0, y: -50)
+        })
         
     }
     
@@ -254,9 +262,11 @@ class ViewController: UIViewController {
         currentAnswer.text = ""
         
         for button in activatedButtons {
-            button.isHidden = false
+            button.alpha = 1
+            button.transform = .identity
         }
         activatedButtons.removeAll()
+        
     }
     
     private func showAlert() {
