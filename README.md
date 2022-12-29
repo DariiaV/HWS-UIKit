@@ -120,3 +120,10 @@
 - UIImageWriteToSavedPhotosAlbum
 
 ![](Project13/Project13.gif)
+
+## [Project 15. Day 57-58](https://github.com/DariiaV/HWS-UIKit/tree/main/Project15)
+### What used:
+- animate(withDuration:)
+- CGAffineTransform
+
+![](Project15/Project15.gif)
