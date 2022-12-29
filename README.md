@@ -109,3 +109,14 @@
 - trailingSwipeActionsConfigurationForRowAt(tableview)
 
 ![](Challenge4/Challenge4.gif)
+
+## [Project 13. Day 52-54](https://github.com/DariiaV/HWS-UIKit/tree/main/Project13)
+### What used:
+- CIImage
+- UIImagePickerController
+- CoreImage
+- CIFilter
+- CIContext
+- UIImageWriteToSavedPhotosAlbum
+
+![](Project13/Project13.gif)
