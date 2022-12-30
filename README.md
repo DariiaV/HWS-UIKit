@@ -133,3 +133,11 @@
 - JSON
 
 ![](Challenge5/Challenge5.gif)
+
+## [Project 16. Day 60-61](https://github.com/DariiaV/HWS-UIKit/tree/main/Project16)
+### What used:
+- MKMapView
+- MKAnnotation
+- CLLocationCoordinate2D
+
+![](Project16/Project16.gif)
