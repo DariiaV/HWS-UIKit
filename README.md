@@ -145,3 +145,12 @@
 ## [Project 19. Day 67-69](https://github.com/DariiaV/HWS-UIKit/tree/main/Project19)
 ### What used:
 - NSExtensionItem
+
+## [Project 20. Day 70-71](https://github.com/DariiaV/HWS-UIKit/tree/main/Project20)
+### What used:
+- UIBezierPath
+- SKAction.follow()
+- for case let (SKNode)
+
+![](Project20/Project20.gif)
+
