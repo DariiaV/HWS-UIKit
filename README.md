@@ -154,3 +154,8 @@
 
 ![](Project20/Project20.gif)
 
+## [Project 21. Day 72-73](https://github.com/DariiaV/HWS-UIKit/tree/main/Project21)
+### What used:
+- UNUserNotificationCenter
+- UNNotificationRequest
+
