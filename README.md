@@ -159,3 +159,11 @@
 - UNUserNotificationCenter
 - UNNotificationRequest
 
+## [Challenge 6. Day 74](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge6)
+### What used:
+- UserDefaults
+- UIActivityViewController
+- NotificationCenter
+- trailingSwipeActionsConfigurationForRowAt
+
+![](Challenge6/Challenge6.gif)
