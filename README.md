@@ -167,3 +167,8 @@
 - trailingSwipeActionsConfigurationForRowAt
 
 ![](Challenge6/Challenge6.gif)
+
+## [Project 22. Day 75-76](https://github.com/DariiaV/HWS-UIKit/tree/main/Project22)
+### What used:
+- Core Location
+- CLBeaconRegion
