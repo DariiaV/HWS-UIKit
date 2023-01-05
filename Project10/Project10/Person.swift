@@ -7,12 +7,7 @@
 
 import UIKit
 
-class Person: NSObject {
+struct Person: Hashable {
     var name: String
-    var imagePath: String
-    
-    init(name: String, imagePath: String) {
-        self.name = name
-        self.imagePath = imagePath
-    }
+    let imagePath: String
 }

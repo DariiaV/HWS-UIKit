@@ -7,7 +7,12 @@
 
 import UIKit
 
+enum Section {
+    case first
+}
+
 class ViewController: UIViewController {
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, Person>
     
     private var people = [Person]()
     
@@ -18,17 +23,44 @@ class ViewController: UIViewController {
         layout.itemSize = CGSize(width: 140, height: 180)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(PersonCell.self, forCellWithReuseIdentifier: identifier)
-        collectionView.dataSource = self
+//        collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .black
         return collectionView
     }()
 
+    private lazy var dataSource: DataSource = {
+        let dataSource = DataSource(collectionView: collectionView) { [weak self] collectionView, indexPath, itemIdentifier in
+            guard let self, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.identifier, for: indexPath) as? PersonCell else {
+                return UICollectionViewCell()
+            }
+            
+            let person = self.people[indexPath.item]
+            let path = self.getDocumentDirectory().appendingPathComponent(person.imagePath)
+            let image = UIImage(contentsOfFile: path.path)
+            
+            cell.setupCell(name: person.name, image: image)
+            cell.layer.cornerRadius = 7
+            
+            
+            return cell
+        }
+        
+        return dataSource
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
         setupNavigationItem()
+    }
+    
+    private func updateUI() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Person>()
+        snapshot.appendSections([.first])
+        snapshot.appendItems(people)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
     
     private func setupNavigationItem() {
@@ -57,37 +89,36 @@ class ViewController: UIViewController {
     }
 
 }
-extension ViewController: UICollectionViewDataSource {
-    
-    // MARK: - UICollectionViewDataSource
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return people.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? PersonCell else {
-            return UICollectionViewCell()
-        }
-        
-        let person = people[indexPath.item]
-        let path = getDocumentDirectory().appendingPathComponent(person.imagePath)
-        let image = UIImage(contentsOfFile: path.path)
-        
-        cell.setupCell(name: person.name, image: image)
-        cell.layer.cornerRadius = 7
-        
-        
-        return cell
-    }
-}
+//extension ViewController: UICollectionViewDataSource {
+//
+//    // MARK: - UICollectionViewDataSource
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return people.count
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? PersonCell else {
+//            return UICollectionViewCell()
+//        }
+//
+//        let person = people[indexPath.item]
+//        let path = getDocumentDirectory().appendingPathComponent(person.imagePath)
+//        let image = UIImage(contentsOfFile: path.path)
+//
+//        cell.setupCell(name: person.name, image: image)
+//        cell.layer.cornerRadius = 7
+//
+//
+//        return cell
+//    }
+//}
 
 extension ViewController: UICollectionViewDelegate {
     
     // MARK: - UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let person = people[indexPath.item]
         let ac = UIAlertController(title: "You wants rename person or delete person?", message: nil, preferredStyle: .alert)
         ac.addTextField()
 
@@ -96,8 +127,9 @@ extension ViewController: UICollectionViewDelegate {
             !newName.isEmpty else {
                 return
             }
-            person.name = newName
-            self?.collectionView.reloadData()
+            self?.people[indexPath.item].name = newName
+            self?.updateUI()
+//            self?.collectionView.reloadData()
 
         }
         let deleteAction = UIAlertAction(title: "Delete", style: .default) { [weak self] _ in
@@ -106,7 +138,8 @@ extension ViewController: UICollectionViewDelegate {
             }
             
             self.people.remove(at: indexPath.item)
-            self.collectionView.deleteItems(at: [indexPath])
+            self.updateUI()
+//            self.collectionView.deleteItems(at: [indexPath])
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 
@@ -137,7 +170,8 @@ extension ViewController: UIImagePickerControllerDelegate {
 
         let person = Person(name: "Unknown", imagePath: imageName)
         people.append(person)
-        collectionView.reloadData()
+//        collectionView.reloadData()
+        updateUI()
 
         dismiss(animated: true)
     }
