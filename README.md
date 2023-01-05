@@ -172,3 +172,8 @@
 ### What used:
 - Core Location
 - CLBeaconRegion
+
+## [Project 25. Day 83-84](https://github.com/DariiaV/HWS-UIKit/tree/main/Project25)
+### What used:
+- MCSession
+- MCBrowserViewController
