@@ -177,3 +177,9 @@
 ### What used:
 - MCSession
 - MCBrowserViewController
+
+## [Project 27. Day 88-89](https://github.com/DariiaV/HWS-UIKit/tree/main/Project27)
+### What used:
+- UIGraphicsImageRenderer
+- NSAttributedString
+
