@@ -183,3 +183,11 @@
 - UIGraphicsImageRenderer
 - NSAttributedString
 
+## [Challenge 7. Day 90](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge7)
+### What used:
+- NSAttributedString
+- UIActivityViewController
+- UIImagePickerController
+- UIGraphicsImageRenderer
+
+![](Challenge7/Challenge7.gif)
