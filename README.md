@@ -195,3 +195,5 @@
 ## [Project 30. Day 97-98](https://github.com/DariiaV/HWS-UIKit/tree/main/project30-files)
 ![](project30-files/Project30.gif)
 
+## [Challenge 8. Day 99](https://github.com/DariiaV/HWS-UIKit/tree/main/Challenge8)
+![](Challenge8/Challenge8.gif)
